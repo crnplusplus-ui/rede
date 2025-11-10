@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="h-full">
+<html lang="pt-BR" class="h-full bg-slate-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NivoTV Social Timeline</title>
+    <title>Timeline Social • Tema Claro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,21 +16,15 @@
         theme: {
           extend: {
             colors: {
-              brand: "#6236FF",
-              "brand-accent": "#FE4CD2",
-              "brand-dark": "#07061F",
-              "brand-muted": "#8A7DFF",
-              "surface": "#161437",
+              brand: "#1B74E4",
+              "brand-light": "#E7F1FF",
+              "brand-dark": "#0A3563",
             },
             fontFamily: {
               sans: ["Inter", "system-ui", "sans-serif"],
             },
             boxShadow: {
-              neon: "0 20px 60px -25px rgba(98, 54, 255, 0.65)",
-            },
-            backgroundImage: {
-              "nivo-noise":
-                "radial-gradient(110% 90% at 0% 0%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%), radial-gradient(70% 65% at 100% 0%, rgba(98,54,255,0.35) 0%, rgba(98,54,255,0) 70%), radial-gradient(80% 70% at 50% 100%, rgba(254,76,210,0.25) 0%, rgba(10,8,30,0.95) 70%)",
+              card: "0 20px 45px -25px rgba(15, 23, 42, 0.2)",
             },
           },
         },
@@ -41,28 +35,25 @@
         font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", sans-serif;
       }
-      .glass {
-        @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl;
+
+      .card {
+        @apply rounded-3xl bg-white border border-slate-100 shadow-card;
       }
     </style>
   </head>
-  <body class="h-full bg-brand-dark bg-nivo-noise text-white">
-    <div class="min-h-full bg-brand-dark/80">
-      <!-- Top Navigation -->
-      <header
-        class="sticky top-0 z-30 bg-brand-dark/90 backdrop-blur-lg border-b border-white/10"
-      >
-        <div
-          class="mx-auto flex max-w-7xl items-center gap-6 px-4 py-4 sm:px-6 lg:px-8"
-        >
+  <body class="h-full min-h-screen">
+    <div class="min-h-screen bg-slate-100">
+      <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div class="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <div class="flex items-center gap-3">
             <span
-              class="grid h-12 w-12 place-content-center rounded-2xl bg-gradient-to-br from-brand via-brand-accent to-rose-500 text-lg font-extrabold tracking-wide shadow-neon"
-              >N</span
+              class="grid h-12 w-12 place-content-center rounded-2xl bg-brand text-lg font-bold tracking-tight text-white shadow-lg shadow-brand/30"
             >
+              F
+            </span>
             <div>
-              <p class="text-lg font-semibold">NivoTV Social</p>
-              <p class="text-xs uppercase text-white/60 tracking-[0.3em]">
+              <p class="text-lg font-semibold text-slate-800">Flow Social</p>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-400">
                 timeline
               </p>
             </div>
@@ -72,345 +63,209 @@
             <div class="relative w-full max-w-xl">
               <input
                 type="search"
-                placeholder="Buscar creators, séries ou playlists"
-                class="w-full rounded-full border border-white/10 bg-white/10 py-3 pl-12 pr-4 text-sm text-white placeholder:text-white/50 focus:border-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-accent/40"
+                placeholder="Buscar amigos, grupos ou vídeos"
+                class="w-full rounded-full border border-slate-200 bg-slate-100/80 py-3 pl-12 pr-4 text-sm text-slate-600 placeholder:text-slate-400 focus:border-brand focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/20"
               />
               <span
-                class="absolute inset-y-0 left-0 flex w-12 items-center justify-center text-white/50"
+                class="absolute inset-y-0 left-0 flex w-12 items-center justify-center text-slate-400"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  fill="currentColor"
+                  fill="none"
+                  stroke="currentColor"
                   class="h-5 w-5"
                 >
                   <path
-                    fill-rule="evenodd"
-                    d="M10.5 3a7.5 7.5 0 0 1 5.95 12.163l4.194 4.193a.75.75 0 0 1-1.06 1.06l-4.193-4.194A7.5 7.5 0 1 1 10.5 3Zm0 1.5a6 6 0 1 0 4.243 10.243A6 6 0 0 0 10.5 4.5Z"
-                    clip-rule="evenodd"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m21 21-4.35-4.35m0 0A7.5 7.5 0 1 0 6.65 6.65a7.5 7.5 0 0 0 10 10Z"
                   />
                 </svg>
               </span>
             </div>
 
-            <nav class="flex items-center gap-6 text-sm font-medium text-white/80">
-              <a href="#" class="transition hover:text-white">Home</a>
-              <a href="#" class="transition hover:text-white">Canal</a>
-              <a href="#" class="transition hover:text-white">Explore</a>
-              <a href="#" class="transition hover:text-white">Eventos</a>
-              <a href="#" class="transition hover:text-white">Store</a>
+            <nav class="flex items-center gap-6 text-sm font-medium text-slate-500">
+              <a href="#" class="flex items-center gap-2 rounded-full px-4 py-2 transition hover:bg-brand-light hover:text-brand">
+                Início
+              </a>
+              <a href="#" class="flex items-center gap-2 rounded-full px-4 py-2 transition hover:bg-brand-light hover:text-brand">
+                Grupos
+              </a>
+              <a href="#" class="flex items-center gap-2 rounded-full px-4 py-2 transition hover:bg-brand-light hover:text-brand">
+                Marketplace
+              </a>
+              <a href="#" class="flex items-center gap-2 rounded-full px-4 py-2 transition hover:bg-brand-light hover:text-brand">
+                Eventos
+              </a>
+              <a href="#" class="flex items-center gap-2 rounded-full px-4 py-2 transition hover:bg-brand-light hover:text-brand">
+                Lembranças
+              </a>
             </nav>
           </div>
 
-          <div class="ml-auto flex items-center gap-4">
+          <div class="ml-auto flex items-center gap-3">
             <button
-              class="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-white/70 transition hover:bg-white/20"
+              class="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-500 transition hover:border-brand hover:bg-brand-light hover:text-brand"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                fill="none"
                 stroke="currentColor"
                 class="h-6 w-6"
               >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.766.64 3.62 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+                  stroke-width="1.5"
+                  d="M15 17h5l-.86-1.72A2 2 0 0 1 18 14.5V11a6 6 0 1 0-12 0v3.5a2 2 0 0 1-1.14 1.78L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9"
                 />
               </svg>
               <span
-                class="absolute -right-1 -top-1 h-5 w-5 rounded-full bg-brand-accent text-[10px] font-semibold text-white"
-                >3</span
+                class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[10px] font-semibold text-white shadow"
               >
+                4
+              </span>
             </button>
             <button
-              class="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-white/70 transition hover:bg-white/20"
+              class="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-500 transition hover:border-brand hover:bg-brand-light hover:text-brand"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                fill="none"
                 stroke="currentColor"
                 class="h-6 w-6"
               >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  stroke-width="1.5"
+                  d="M12 7a4 4 0 0 1 7.87 1.06 4 4 0 0 1-1.07 6.62 7 7 0 1 1-13.6 3.02A4 4 0 1 1 12 7Z"
                 />
               </svg>
               <span
-                class="absolute -right-1 -top-1 h-5 w-5 rounded-full bg-teal-500 text-[10px] font-semibold text-white"
-                >5</span
+                class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-[10px] font-semibold text-white shadow"
               >
+                9+
+              </span>
             </button>
-            <div class="hidden items-center gap-3 rounded-2xl border border-white/10 bg-white/10 px-3 py-2 text-sm font-medium text-white/80 lg:flex">
-              <div class="h-9 w-9 overflow-hidden rounded-xl border border-white/10">
+            <div
+              class="hidden items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-600 lg:flex"
+            >
+              <div class="h-9 w-9 overflow-hidden rounded-xl border border-white">
                 <img
-                  src="https://images.unsplash.com/photo-1640955010420-29bd7285e4cb?auto=format&fit=facearea&w=120&h=120&q=80"
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=facearea&w=120&h=120&q=80"
                   alt="Avatar"
                   class="h-full w-full object-cover"
                 />
               </div>
               <div>
-                <p class="font-medium">Marina Vibes</p>
-                <p class="text-xs text-white/50">Creator Elite</p>
+                <p class="font-semibold text-slate-800">Ana Ribeiro</p>
+                <p class="text-xs text-slate-400">Produtora de conteúdo</p>
               </div>
             </div>
             <button
-              class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-white/70 transition hover:bg-white/20 lg:hidden"
+              class="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-500 transition hover:border-brand hover:bg-brand-light hover:text-brand lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                fill="none"
                 stroke="currentColor"
                 class="h-6 w-6"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5M3.75 12h16.5m-16.5 6.75h16.5" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
         </div>
       </header>
 
-      <!-- Main layout -->
-      <main class="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[260px_minmax(0,1fr)_280px] lg:px-8">
-        <!-- Left Sidebar -->
+      <main class="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[250px_minmax(0,1fr)_280px] lg:gap-8 lg:px-8">
         <aside class="hidden space-y-6 lg:block">
-          <section class="glass rounded-3xl p-6">
-            <div class="flex items-center gap-4">
-              <div class="relative h-16 w-16 overflow-hidden rounded-2xl border border-brand/40 bg-brand/20">
-                <img
-                  src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=facearea&w=160&h=160&q=80"
-                  alt="Avatar principal"
-                  class="h-full w-full object-cover"
-                />
-                <span class="absolute -bottom-1 -right-1 rounded-full bg-emerald-500 px-2 py-0.5 text-[10px] font-semibold uppercase">Live</span>
-              </div>
-              <div>
-                <p class="text-lg font-semibold">Marina Vibes</p>
-                <p class="text-sm text-white/50">@marinavibes</p>
-              </div>
-            </div>
-            <dl class="mt-6 grid grid-cols-3 gap-3 text-center text-xs font-medium text-white/70">
-              <div class="rounded-2xl bg-white/5 p-3">
-                <dt class="text-white">24K</dt>
-                <dd class="text-white/60">Seguidores</dd>
-              </div>
-              <div class="rounded-2xl bg-white/5 p-3">
-                <dt class="text-white">731</dt>
-                <dd class="text-white/60">Seguindo</dd>
-              </div>
-              <div class="rounded-2xl bg-white/5 p-3">
-                <dt class="text-white">89</dt>
-                <dd class="text-white/60">Clipes</dd>
-              </div>
-            </dl>
-            <button class="mt-6 w-full rounded-2xl bg-gradient-to-r from-brand via-brand-accent to-rose-500 py-3 text-sm font-semibold text-white shadow-neon transition hover:brightness-110">
-              Novo destaque
-            </button>
-          </section>
-
-          <section class="glass rounded-3xl p-6">
-            <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">
-              Navegação
-            </h2>
-            <nav class="mt-4 space-y-2 text-sm font-medium text-white/70">
-              <a
-                href="#"
-                class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white"
-              >
-                <span class="grid h-9 w-9 place-content-center rounded-xl bg-brand/20 text-brand">
+          <section class="card p-6">
+            <header class="flex items-center justify-between">
+              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+                atalhos
+              </h2>
+              <button class="text-xs font-semibold text-brand hover:text-brand-dark">
+                Ver tudo
+              </button>
+            </header>
+            <nav class="mt-5 space-y-3 text-sm font-medium text-slate-600">
+              <a href="#" class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-slate-100">
+                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-light text-brand">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
                     <path d="M10.707 1.707a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 2 10h1v7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4h2v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-7h1a1 1 0 0 0 .707-1.707l-7-7Z" />
                   </svg>
                 </span>
-                Início
+                Página inicial
               </a>
-              <a
-                href="#"
-                class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white"
-              >
-                <span class="grid h-9 w-9 place-content-center rounded-xl bg-brand-accent/20 text-brand-accent">
+              <a href="#" class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-slate-100">
+                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-500">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
-                    <path d="M2 5a2 2 0 0 1 2-2h3.5a.5.5 0 0 1 .447.276L9.118 5H16a2 2 0 0 1 2 2v1H2V5Z" />
-                    <path d="M2 9h16v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9Z" />
+                    <path d="M4 3a2 2 0 0 0-2 2v1h16V5a2 2 0 0 0-2-2H4Zm14 4H2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
                   </svg>
                 </span>
-                Programação
+                Vídeos em destaque
               </a>
-              <a
-                href="#"
-                class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white"
-              >
-                <span class="grid h-9 w-9 place-content-center rounded-xl bg-rose-500/20 text-rose-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
-                    <path d="M3 3a1 1 0 0 0-1 1v1a4 4 0 0 0 3.8 3.995L6 9h2a1 1 0 0 1 .117 1.993L8 11H6a6 6 0 0 1-5.996-5.775L0 5V4a3 3 0 0 1 3-3h1a1 1 0 0 1 .117 1.993L4 3H3Z" />
-                    <path d="M12 9a1 1 0 0 1 1 1v1a6 6 0 0 1-5.775 5.996L7 17H6a1 1 0 0 1-.117-1.993L6 15l1 .001a4 4 0 0 0 3.995-3.8L11 11v-1a1 1 0 0 1 1-1Z" />
-                    <path d="M15 0a1 1 0 0 1 .993.883l.007.117v1h1a1 1 0 0 1 .993.883L18 3v1a6 6 0 0 1-5.775 5.996L12 10h-1a1 1 0 0 1-.993-.883L10 9a1 1 0 0 1 .883-.993L11 8h1a4 4 0 0 0 3.995-3.8L16 4V3h-1a1 1 0 0 1-.993-.883L14 2V1a1 1 0 0 1 .883-.993L15 0Z" />
-                  </svg>
-                </span>
-                Clips ao vivo
-              </a>
-              <a
-                href="#"
-                class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white"
-              >
-                <span class="grid h-9 w-9 place-content-center rounded-xl bg-emerald-500/20 text-emerald-400">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
-                    <path d="M9.404 1.05a1 1 0 0 1 1.192 0l7 5.25A1 1 0 0 1 17.75 8H2.25a1 1 0 0 1-.846-1.614l7-5.25Z" />
-                    <path d="M3 9h14v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
-                  </svg>
-                </span>
-                Salas premium
-              </a>
-              <a
-                href="#"
-                class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white"
-              >
-                <span class="grid h-9 w-9 place-content-center rounded-xl bg-white/10 text-white">
+              <a href="#" class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-slate-100">
+                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-100 text-emerald-500">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
                     <path d="M2 5a3 3 0 0 1 3-3h5a3 3 0 0 1 2.4 1.2l4 5.333A3 3 0 0 1 17 10.2V15a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5Z" />
                   </svg>
                 </span>
-                Biblioteca
+                Salvos
+              </a>
+              <a href="#" class="flex items-center gap-3 rounded-2xl px-3 py-2 transition hover:bg-slate-100">
+                <span class="flex h-9 w-9 items-center justify-center rounded-full bg-rose-100 text-rose-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
+                    <path d="M10.243 2.757a6 6 0 0 1 8.486 8.486l-7.071 7.07a1 1 0 0 1-1.414 0l-7.07-7.07a6 6 0 0 1 8.485-8.486l.707.707.707-.707Z" />
+                  </svg>
+                </span>
+                Favoritos
               </a>
             </nav>
           </section>
 
-          <section class="glass rounded-3xl p-6">
-            <header class="flex items-center justify-between">
-              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">
-                playlists
-              </h2>
-              <button class="text-xs font-semibold text-brand-muted hover:text-white">
-                Ver tudo
-              </button>
-            </header>
-            <ul class="mt-4 space-y-3 text-sm text-white/70">
-              <li class="flex items-center gap-3 rounded-2xl p-2 hover:bg-white/10">
-                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-brand-accent text-white">
-                  01
-                </span>
-                <div>
-                  <p class="font-semibold text-white">Neo Pop Sessions</p>
-                  <p class="text-xs text-white/50">Atualizado há 2h</p>
-                </div>
-              </li>
-              <li class="flex items-center gap-3 rounded-2xl p-2 hover:bg-white/10">
-                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-accent to-rose-500 text-white">
-                  02
-                </span>
-                <div>
-                  <p class="font-semibold text-white">Documenta360</p>
-                  <p class="text-xs text-white/50">Nova série original</p>
-                </div>
-              </li>
-              <li class="flex items-center gap-3 rounded-2xl p-2 hover:bg-white/10">
-                <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white">
-                  03
-                </span>
-                <div>
-                  <p class="font-semibold text-white">Cinema Indie</p>
-                  <p class="text-xs text-white/50">12 conteúdos</p>
-                </div>
-              </li>
-            </ul>
+          <section class="card p-6">
+            <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+              memórias
+            </h2>
+            <div class="mt-5 space-y-4">
+              <article class="rounded-2xl border border-slate-100 bg-slate-50/80 p-4">
+                <p class="text-xs uppercase tracking-[0.25em] text-slate-400">há 1 ano</p>
+                <p class="mt-2 text-sm text-slate-600">
+                  Você compartilhou esta foto da estreia do projeto
+                  <strong class="text-slate-800">Neon Stories</strong>.
+                </p>
+                <img
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+                  alt="Memória"
+                  class="mt-4 h-44 w-full rounded-2xl object-cover"
+                />
+                <button class="mt-4 w-full rounded-full bg-white px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand-light hover:text-brand-dark">
+                  Compartilhar memória
+                </button>
+              </article>
+            </div>
           </section>
         </aside>
 
-        <!-- Timeline -->
-        <section class="space-y-8">
-          <!-- Stories carousel -->
-          <div class="glass rounded-3xl p-6">
-            <header class="flex items-center justify-between">
-              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">
-                stories
-              </h2>
-              <button class="text-xs font-semibold text-brand-muted hover:text-white">
-                Ver todos
-              </button>
-            </header>
-            <div class="mt-6 flex gap-4 overflow-x-auto pb-2">
-              <button
-                class="flex min-w-[90px] flex-col items-center gap-3 rounded-2xl border border-dashed border-white/20 bg-white/5 p-4 text-xs text-white/60 transition hover:border-brand hover:text-white"
-              >
-                <span
-                  class="grid h-14 w-14 place-content-center rounded-xl bg-gradient-to-br from-brand to-brand-accent text-2xl font-semibold text-white"
-                >
-                  +
-                </span>
-                Criar story
-              </button>
-              <div class="flex min-w-[90px] flex-col items-center gap-3">
-                <div class="relative h-14 w-14 overflow-hidden rounded-xl border-4 border-brand/70">
-                  <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&w=120&h=120&q=80"
-                    alt="Story 1"
-                    class="h-full w-full object-cover"
-                  />
-                  <span class="absolute bottom-1 right-1 h-3 w-3 rounded-full bg-emerald-400 border border-brand-dark"></span>
-                </div>
-                <span class="text-xs text-white/70">Nina Lo</span>
-              </div>
-              <div class="flex min-w-[90px] flex-col items-center gap-3">
-                <div class="relative h-14 w-14 overflow-hidden rounded-xl border-4 border-brand-accent/70">
-                  <img
-                    src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=facearea&w=120&h=120&q=80"
-                    alt="Story 2"
-                    class="h-full w-full object-cover"
-                  />
-                  <span class="absolute bottom-1 right-1 h-3 w-3 rounded-full bg-rose-400 border border-brand-dark"></span>
-                </div>
-                <span class="text-xs text-white/70">CyberDani</span>
-              </div>
-              <div class="flex min-w-[90px] flex-col items-center gap-3">
-                <div class="relative h-14 w-14 overflow-hidden rounded-xl border-4 border-indigo-400/70">
-                  <img
-                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=facearea&w=120&h=120&q=80"
-                    alt="Story 3"
-                    class="h-full w-full object-cover"
-                  />
-                  <span class="absolute bottom-1 right-1 h-3 w-3 rounded-full bg-yellow-400 border border-brand-dark"></span>
-                </div>
-                <span class="text-xs text-white/70">GlowRae</span>
-              </div>
-              <div class="flex min-w-[90px] flex-col items-center gap-3">
-                <div class="relative h-14 w-14 overflow-hidden rounded-xl border-4 border-emerald-400/70">
-                  <img
-                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=facearea&w=120&h=120&q=80"
-                    alt="Story 4"
-                    class="h-full w-full object-cover"
-                  />
-                  <span class="absolute bottom-1 right-1 h-3 w-3 rounded-full bg-emerald-400 border border-brand-dark"></span>
-                </div>
-                <span class="text-xs text-white/70">VJ Pixel</span>
-              </div>
-              <div class="flex min-w-[90px] flex-col items-center gap-3">
-                <div class="relative h-14 w-14 overflow-hidden rounded-xl border-4 border-amber-400/70">
-                  <img
-                    src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=facearea&w=120&h=120&q=80"
-                    alt="Story 5"
-                    class="h-full w-full object-cover"
-                  />
-                  <span class="absolute bottom-1 right-1 h-3 w-3 rounded-full bg-amber-400 border border-brand-dark"></span>
-                </div>
-                <span class="text-xs text-white/70">DJ Lunna</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Composer -->
-          <div class="glass rounded-3xl p-6">
+        <section class="space-y-6">
+          <div class="card p-6">
             <div class="flex gap-4">
-              <div class="h-12 w-12 overflow-hidden rounded-2xl border border-white/10">
+              <div class="h-12 w-12 overflow-hidden rounded-2xl border border-slate-200">
                 <img
-                  src="https://images.unsplash.com/photo-1584999734482-0361aecad844?auto=format&fit=facearea&w=120&h=120&q=80"
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=facearea&w=120&h=120&q=80"
                   alt="Avatar"
                   class="h-full w-full object-cover"
                 />
@@ -418,352 +273,363 @@
               <div class="flex-1 space-y-4">
                 <textarea
                   rows="3"
-                  placeholder="Compartilhe o que você está produzindo agora..."
-                  class="w-full resize-none rounded-3xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/50 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/40"
+                  placeholder="No que você está pensando, Ana?"
+                  class="w-full resize-none rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600 placeholder:text-slate-400 focus:border-brand focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand/20"
                 ></textarea>
                 <div class="flex flex-wrap items-center justify-between gap-3">
-                  <div class="flex items-center gap-3 text-xs font-medium text-white/60">
-                    <button class="flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 transition hover:bg-white/20">
+                  <div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-500">
+                    <button class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 transition hover:border-brand hover:text-brand">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-15-9 3.75 3.75L12 9l2.625 2.625 3.75-3.75" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z" />
                       </svg>
-                      Clips
+                      Foto
                     </button>
-                    <button class="flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 transition hover:bg-white/20">
+                    <button class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 transition hover:border-brand hover:text-brand">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12 9 4.5M9 4.5V9a3 3 0 0 0 3 3h9" />
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 15H9.75L8.25 18.75 6 9.75 4.5 15H2.25" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A3.001 3.001 0 0 0 9 3m3 3.042V21m0 0L8 17m4 4 4-4" />
                       </svg>
-                      Eventos
+                      Check-in
                     </button>
-                    <button class="flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 transition hover:bg-white/20">
+                    <button class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 transition hover:border-brand hover:text-brand">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955a.5.5 0 0 1 .707 0L21.75 12m-1.5 0V19.5a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V12" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0A3.75 3.75 0 1 0 8.25 9 3.75 3.75 0 0 0 12 12.75ZM12 18h.008v.008H12Z" />
                       </svg>
-                      Colabs
+                      Humor
                     </button>
                   </div>
-                  <button class="rounded-full bg-gradient-to-r from-brand via-brand-accent to-rose-500 px-6 py-2 text-sm font-semibold shadow-neon transition hover:brightness-110">
-                    Publicar agora
+                  <button class="rounded-full bg-brand px-6 py-2 text-sm font-semibold text-white shadow transition hover:brightness-110">
+                    Publicar
                   </button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Feed posts -->
-          <article class="space-y-6">
-            <section class="glass rounded-3xl p-6">
-              <header class="flex items-start justify-between">
-                <div class="flex gap-4">
-                  <div class="h-12 w-12 overflow-hidden rounded-2xl border border-brand/30">
-                    <img
-                      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=120&h=120&q=80"
-                      alt="Avatar post"
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <div class="flex items-center gap-2 text-sm">
-                      <span class="font-semibold text-white">Studio Orbit</span>
-                      <span class="rounded-full bg-brand/20 px-2 py-0.5 text-[11px] uppercase text-brand">
-                        oficial
-                      </span>
-                    </div>
-                    <p class="text-xs text-white/50">há 12 minutos • #NivoMusic</p>
-                  </div>
-                </div>
-                <button class="rounded-full bg-white/5 p-2 text-white/60 hover:text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
-                    <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-                  </svg>
-                </button>
-              </header>
-              <div class="mt-6 space-y-4">
-                <p class="text-sm text-white/80">
-                  Abrimos nosso set de quinta com um preview do novo álbum NeonPulse ✨🎶.
-                  Para quem perdeu a live, já está disponível em 4K na biblioteca premium!
-                </p>
-                <div class="overflow-hidden rounded-3xl border border-white/10">
+          <article class="card space-y-6 p-6">
+            <header class="flex items-start justify-between">
+              <div class="flex gap-3">
+                <div class="h-11 w-11 overflow-hidden rounded-2xl border border-slate-200">
                   <img
-                    src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80"
-                    alt="Show ao vivo"
-                    class="h-72 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=facearea&w=120&h=120&q=80"
+                    alt="Avatar do post"
+                    class="h-full w-full object-cover"
                   />
                 </div>
-                <div class="flex items-center justify-between text-xs font-medium text-white/60">
-                  <div class="flex items-center gap-4">
-                    <button class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 transition hover:bg-white/20">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                      </svg>
-                      1.2K
-                    </button>
-                    <button class="flex items-center gap-2 rounded-full px-3 py-2 text-white/60 transition hover:bg-white/20 hover:text-white">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12 9 4.5m0 0V9a3 3 0 0 0 3 3h9" />
-                      </svg>
-                      Compartilhar
-                    </button>
-                    <button class="flex items-center gap-2 rounded-full px-3 py-2 text-white/60 transition hover:bg-white/20 hover:text-white">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18M7.5 6v12m9-12v12M4.125 18h15.75a1.125 1.125 0 0 1 0 2.25H4.125a1.125 1.125 0 0 1 0-2.25Z" />
-                      </svg>
-                      Salvar
-                    </button>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 text-sm">
+                    <span class="font-semibold text-slate-800">Studio Orbit</span>
+                    <span class="rounded-full bg-brand-light px-2 py-0.5 text-[11px] uppercase text-brand">
+                      oficial
+                    </span>
                   </div>
-                  <p>289 comentários</p>
+                  <p class="text-xs text-slate-400">há 20 minutos · São Paulo · Público</p>
                 </div>
               </div>
-              <footer class="mt-6 space-y-4 border-t border-white/10 pt-6">
-                <div class="flex items-start gap-3">
-                  <div class="h-9 w-9 overflow-hidden rounded-xl border border-white/10">
-                    <img
-                      src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=facearea&w=120&h=120&q=80"
-                      alt="Comentário avatar"
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div class="flex-1 rounded-3xl bg-white/5 px-4 py-3 text-sm text-white/80">
-                    O visual tá surreal! A iluminação e o setlist lembraram muito os especiais clássicos da Nivo dos anos 2000.
-                  </div>
-                </div>
-                <div class="flex items-center gap-3">
-                  <input
-                    type="text"
-                    placeholder="Escreva um comentário..."
-                    class="flex-1 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs text-white placeholder:text-white/50 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
-                  />
-                  <button class="rounded-full bg-brand px-4 py-2 text-xs font-semibold text-white transition hover:bg-brand-muted">
-                    Enviar
-                  </button>
-                </div>
-              </footer>
-            </section>
-
-            <section class="glass rounded-3xl p-6">
-              <header class="flex items-start justify-between">
-                <div class="flex gap-4">
-                  <div class="h-12 w-12 overflow-hidden rounded-2xl border border-brand-accent/40">
-                    <img
-                      src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=facearea&w=120&h=120&q=80"
-                      alt="Avatar post 2"
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <div class="flex items-center gap-2 text-sm">
-                      <span class="font-semibold text-white">NivoTV Labs</span>
-                      <span class="rounded-full bg-brand-accent/20 px-2 py-0.5 text-[11px] uppercase text-brand-accent">
-                        exclusivo
-                      </span>
-                    </div>
-                    <p class="text-xs text-white/50">há 1 hora • #BehindTheScenes</p>
-                  </div>
-                </div>
-                <button class="rounded-full bg-white/5 p-2 text-white/60 hover:text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
-                    <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+              <button class="rounded-full p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
+                  <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+                </svg>
+              </button>
+            </header>
+            <div class="space-y-4 text-sm text-slate-600">
+              <p>
+                Gratidão a todo mundo que participou da live <strong class="text-slate-800">NeonPulse</strong> ontem!
+                Liberamos o replay em 4K no nosso hub exclusivo. Foi uma mistura de nostalgia e futuro no mesmo set 🔊✨
+              </p>
+              <div class="overflow-hidden rounded-3xl border border-slate-100">
+                <img
+                  src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80"
+                  alt="Show ao vivo"
+                  class="h-72 w-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="flex items-center justify-between border-y border-slate-100 py-3 text-xs font-medium text-slate-500">
+              <div class="flex items-center gap-4">
+                <button class="flex items-center gap-2 rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-brand">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                   </svg>
+                  1,4 mil
                 </button>
-              </header>
-              <div class="mt-6 space-y-4">
-                <p class="text-sm text-white/80">
-                  Estamos testando novos layouts interativos para a home da plataforma.
-                  Qual visual vocês curtem mais? Deixem feedback aqui! 👇
-                </p>
-                <div class="grid gap-4 md:grid-cols-2">
-                  <div class="rounded-3xl border border-white/10 bg-white/5 p-4">
-                    <p class="text-xs uppercase tracking-[0.3em] text-white/40 mb-3">
-                      opção alfa
-                    </p>
-                    <img
-                      src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80"
-                      alt="Layout opção A"
-                      class="h-48 w-full rounded-2xl object-cover"
-                    />
-                  </div>
-                  <div class="rounded-3xl border border-white/10 bg-white/5 p-4">
-                    <p class="text-xs uppercase tracking-[0.3em] text-white/40 mb-3">
-                      opção beta
-                    </p>
-                    <img
-                      src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92eee?auto=format&fit=crop&w=1000&q=80"
-                      alt="Layout opção B"
-                      class="h-48 w-full rounded-2xl object-cover"
-                    />
-                  </div>
+                <button class="flex items-center gap-2 rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-brand">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.832 0 8.75-2.91 8.75-6.5S16.832 7.25 12 7.25 3.25 10.16 3.25 13.75c0 1.875 1.139 3.563 2.968 4.69-.13.859-.572 2.318-1.807 3.7 0 0 1.833-.192 3.577-1.201.654.156 1.34.241 2.012.241Z" />
+                  </svg>
+                  256 comentários
+                </button>
+                <button class="flex items-center gap-2 rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-brand">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a6 6 0 0 1 6-6h3a6 6 0 0 1 6 6v4.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5V12Z" />
+                  </svg>
+                  Compartilhar
+                </button>
+              </div>
+              <p class="text-slate-400">6,3 mil visualizações</p>
+            </div>
+            <footer class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="h-9 w-9 overflow-hidden rounded-xl border border-slate-200">
+                  <img
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=facearea&w=120&h=120&q=80"
+                    alt="Avatar comentário"
+                    class="h-full w-full object-cover"
+                  />
                 </div>
-                <div class="flex items-center justify-between text-xs font-medium text-white/60">
-                  <div class="flex items-center gap-4">
-                    <button class="flex items-center gap-2 rounded-full bg-brand-accent/20 px-3 py-2 text-brand-accent transition hover:bg-brand-accent/30">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                      </svg>
-                      842
-                    </button>
-                    <button class="flex items-center gap-2 rounded-full px-3 py-2 text-white/60 transition hover:bg-white/20 hover:text-white">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m17.25 6.75-10.5 10.5m0-10.5 10.5 10.5" />
-                      </svg>
-                      Votar depois
-                    </button>
-                  </div>
-                  <p>112 comentários</p>
+                <div class="flex-1 rounded-3xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+                  Sentei com a galera pra assistir o replay e a produção está impecável. Os efeitos de luz deram outra vida ao set!
                 </div>
               </div>
-              <footer class="mt-6 border-t border-white/10 pt-6">
-                <div class="flex items-center gap-3">
-                  <input
-                    type="text"
-                    placeholder="Envie seu feedback..."
-                    class="flex-1 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs text-white placeholder:text-white/50 focus:border-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-accent/30"
+              <div class="flex items-center gap-3">
+                <input
+                  type="text"
+                  placeholder="Escreva um comentário público..."
+                  class="flex-1 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs text-slate-600 placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20"
+                />
+                <button class="rounded-full bg-slate-200 px-4 py-2 text-xs font-semibold text-slate-700 transition hover:bg-brand hover:text-white">
+                  Enviar
+                </button>
+              </div>
+            </footer>
+          </article>
+
+          <article class="card space-y-6 p-6">
+            <header class="flex items-start justify-between">
+              <div class="flex gap-3">
+                <div class="h-11 w-11 overflow-hidden rounded-2xl border border-slate-200">
+                  <img
+                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=facearea&w=120&h=120&q=80"
+                    alt="Avatar do post 2"
+                    class="h-full w-full object-cover"
                   />
-                  <button class="rounded-full bg-brand-accent px-4 py-2 text-xs font-semibold text-white transition hover:bg-rose-500">
-                    Responder
-                  </button>
                 </div>
-              </footer>
-            </section>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 text-sm">
+                    <span class="font-semibold text-slate-800">Núcleo Criativo</span>
+                    <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] uppercase text-slate-500">
+                      comunidade
+                    </span>
+                  </div>
+                  <p class="text-xs text-slate-400">há 1 hora · Evento presencial · Privado</p>
+                </div>
+              </div>
+              <button class="rounded-full p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5" viewBox="0 0 20 20">
+                  <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm0 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+                </svg>
+              </button>
+            </header>
+            <div class="space-y-4 text-sm text-slate-600">
+              <p>
+                Sexta-feira tem encontro da comunidade com oficinas de edição de vídeo, produção musical e XR.
+                Confirme presença e aproveite os laboratórios imersivos!
+              </p>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-3xl border border-slate-100 bg-slate-50 p-4">
+                  <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Workshop 1</p>
+                  <p class="mt-1 text-sm font-semibold text-slate-800">Narrativas visuais dinâmicas</p>
+                  <img
+                    src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92eee?auto=format&fit=crop&w=900&q=80"
+                    alt="Workshop A"
+                    class="mt-4 h-44 w-full rounded-2xl object-cover"
+                  />
+                </div>
+                <div class="rounded-3xl border border-slate-100 bg-slate-50 p-4">
+                  <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Workshop 2</p>
+                  <p class="mt-1 text-sm font-semibold text-slate-800">Produção sonora híbrida</p>
+                  <img
+                    src="https://images.unsplash.com/photo-1529158062015-cad636e69505?auto=format&fit=crop&w=900&q=80"
+                    alt="Workshop B"
+                    class="mt-4 h-44 w-full rounded-2xl object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between border-y border-slate-100 py-3 text-xs font-medium text-slate-500">
+              <div class="flex items-center gap-4">
+                <button class="flex items-center gap-2 rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-brand">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                  </svg>
+                  874
+                </button>
+                <button class="flex items-center gap-2 rounded-full px-3 py-1.5 transition hover:bg-slate-100 hover:text-brand">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 6.75 17.25m0-10.5 10.5 10.5" />
+                  </svg>
+                  Estou dentro!
+                </button>
+              </div>
+              <p class="text-slate-400">47 comentários · 132 participações</p>
+            </div>
+            <footer>
+              <div class="flex items-center gap-3">
+                <input
+                  type="text"
+                  placeholder="Confirme presença ou deixe uma mensagem..."
+                  class="flex-1 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs text-slate-600 placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20"
+                />
+                <button class="rounded-full bg-brand px-4 py-2 text-xs font-semibold text-white shadow transition hover:brightness-110">
+                  Responder
+                </button>
+              </div>
+            </footer>
           </article>
         </section>
 
-        <!-- Right Sidebar -->
         <aside class="space-y-6">
-          <section class="glass rounded-3xl p-6">
+          <section class="card p-6">
             <header class="flex items-center justify-between">
-              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">
-                trending
+              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+                contatos
               </h2>
-              <button class="text-xs font-semibold text-brand-muted hover:text-white">
+              <button class="text-xs font-semibold text-brand hover:text-brand-dark">
                 Atualizar
               </button>
             </header>
-            <ul class="mt-4 space-y-3 text-sm text-white/70">
-              <li class="flex items-center gap-3 rounded-2xl p-3 hover:bg-white/10">
-                <span class="text-xs font-semibold text-white/50">01</span>
+            <ul class="mt-4 space-y-3 text-sm text-slate-600">
+              <li class="flex items-center gap-3 rounded-2xl p-2 transition hover:bg-slate-100">
+                <span class="relative h-10 w-10 overflow-hidden rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&w=120&h=120&q=80"
+                    alt="Contato 1"
+                    class="h-full w-full object-cover"
+                  />
+                  <span class="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-emerald-500"></span>
+                </span>
                 <div class="flex-1">
-                  <p class="font-semibold text-white">#NeonPulse</p>
-                  <p class="text-xs text-white/50">24.8K menções • em alta agora</p>
+                  <p class="font-semibold text-slate-800">Nina Lo</p>
+                  <p class="text-xs text-slate-400">Online agora</p>
                 </div>
-                <span class="rounded-full bg-brand/20 px-2 py-1 text-[10px] uppercase text-brand">live</span>
+                <button class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500 transition hover:bg-brand-light hover:text-brand">
+                  Mensagem
+                </button>
               </li>
-              <li class="flex items-center gap-3 rounded-2xl p-3 hover:bg-white/10">
-                <span class="text-xs font-semibold text-white/50">02</span>
+              <li class="flex items-center gap-3 rounded-2xl p-2 transition hover:bg-slate-100">
+                <span class="relative h-10 w-10 overflow-hidden rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=facearea&w=120&h=120&q=80"
+                    alt="Contato 2"
+                    class="h-full w-full object-cover"
+                  />
+                  <span class="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-emerald-500"></span>
+                </span>
                 <div class="flex-1">
-                  <p class="font-semibold text-white">#Documenta360</p>
-                  <p class="text-xs text-white/50">18.2K menções • lançado hoje</p>
+                  <p class="font-semibold text-slate-800">Pixel Beats</p>
+                  <p class="text-xs text-slate-400">Criando nova playlist</p>
                 </div>
-                <span class="rounded-full bg-brand-accent/20 px-2 py-1 text-[10px] uppercase text-brand-accent">novo</span>
+                <button class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500 transition hover:bg-brand-light hover:text-brand">
+                  Chamar
+                </button>
               </li>
-              <li class="flex items-center gap-3 rounded-2xl p-3 hover:bg-white/10">
-                <span class="text-xs font-semibold text-white/50">03</span>
+              <li class="flex items-center gap-3 rounded-2xl p-2 transition hover:bg-slate-100">
+                <span class="relative h-10 w-10 overflow-hidden rounded-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=facearea&w=120&h=120&q=80"
+                    alt="Contato 3"
+                    class="h-full w-full object-cover"
+                  />
+                  <span class="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-amber-400"></span>
+                </span>
                 <div class="flex-1">
-                  <p class="font-semibold text-white">#CinemaIndie</p>
-                  <p class="text-xs text-white/50">9.3K menções • curadoria Nivo</p>
+                  <p class="font-semibold text-slate-800">Studio NovaLab</p>
+                  <p class="text-xs text-slate-400">Ausente · 15 min</p>
                 </div>
-                <span class="rounded-full bg-emerald-500/20 px-2 py-1 text-[10px] uppercase text-emerald-400">destaque</span>
+                <button class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500 transition hover:bg-brand-light hover:text-brand">
+                  Ping
+                </button>
               </li>
             </ul>
           </section>
 
-          <section class="glass rounded-3xl p-6">
+          <section class="card p-6">
             <header class="flex items-center justify-between">
-              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">
-                sugestões para seguir
+              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+                eventos
               </h2>
-              <button class="text-xs font-semibold text-brand-muted hover:text-white">
+              <button class="text-xs font-semibold text-brand hover:text-brand-dark">
+                Ver todos
+              </button>
+            </header>
+            <ul class="mt-4 space-y-3 text-sm text-slate-600">
+              <li class="flex items-center gap-3 rounded-2xl bg-slate-50 p-3">
+                <div class="h-12 w-12 rounded-2xl border border-slate-200 bg-white text-center">
+                  <p class="text-lg font-semibold text-brand">12</p>
+                  <p class="text-xs uppercase text-slate-400">nov</p>
+                </div>
+                <div class="flex-1">
+                  <p class="font-semibold text-slate-800">Creators Summit</p>
+                  <p class="text-xs text-slate-400">18h · Arena VR · Híbrido</p>
+                </div>
+                <button class="rounded-full bg-brand px-3 py-1.5 text-xs font-semibold text-white shadow transition hover:brightness-110">
+                  Participar
+                </button>
+              </li>
+              <li class="flex items-center gap-3 rounded-2xl p-3 transition hover:bg-slate-100">
+                <div class="h-12 w-12 rounded-2xl border border-slate-200 bg-white text-center">
+                  <p class="text-lg font-semibold text-brand">15</p>
+                  <p class="text-xs uppercase text-slate-400">nov</p>
+                </div>
+                <div class="flex-1">
+                  <p class="font-semibold text-slate-800">NeoDocs Premiere</p>
+                  <p class="text-xs text-slate-400">20h · Canal Flow Social</p>
+                </div>
+                <button class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-500 transition hover:bg-brand-light hover:text-brand">
+                  Interessado
+                </button>
+              </li>
+              <li class="flex items-center gap-3 rounded-2xl p-3 transition hover:bg-slate-100">
+                <div class="h-12 w-12 rounded-2xl border border-slate-200 bg-white text-center">
+                  <p class="text-lg font-semibold text-brand">24</p>
+                  <p class="text-xs uppercase text-slate-400">nov</p>
+                </div>
+                <div class="flex-1">
+                  <p class="font-semibold text-slate-800">Live Sessions 3.0</p>
+                  <p class="text-xs text-slate-400">22h · Studio Orbit</p>
+                </div>
+                <button class="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-500 transition hover:bg-brand-light hover:text-brand">
+                  Detalhes
+                </button>
+              </li>
+            </ul>
+          </section>
+
+          <section class="card p-6">
+            <header class="flex items-center justify-between">
+              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+                novidades
+              </h2>
+              <button class="text-xs font-semibold text-brand hover:text-brand-dark">
                 Ver mais
               </button>
             </header>
-            <ul class="mt-4 space-y-3 text-sm text-white/70">
-              <li class="flex items-center gap-3 rounded-2xl p-3 hover:bg-white/10">
-                <div class="h-10 w-10 overflow-hidden rounded-xl border border-brand/30">
-                  <img
-                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=facearea&w=120&h=120&q=80"
-                    alt="Sugestão"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="flex-1">
-                  <p class="font-semibold text-white">Studio NovaLab</p>
-                  <p class="text-xs text-white/50">Produção audiovisual</p>
-                </div>
-                <button class="rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20">
-                  Seguir
-                </button>
-              </li>
-              <li class="flex items-center gap-3 rounded-2xl p-3 hover:bg-white/10">
-                <div class="h-10 w-10 overflow-hidden rounded-xl border border-brand/30">
-                  <img
-                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=facearea&w=120&h=120&q=80"
-                    alt="Sugestão 2"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="flex-1">
-                  <p class="font-semibold text-white">DJ Neonwave</p>
-                  <p class="text-xs text-white/50">Live performer</p>
-                </div>
-                <button class="rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20">
-                  Seguir
-                </button>
-              </li>
-              <li class="flex items-center gap-3 rounded-2xl p-3 hover:bg-white/10">
-                <div class="h-10 w-10 overflow-hidden rounded-xl border border-brand/30">
-                  <img
-                    src="https://images.unsplash.com/photo-1479708231027-3b0b6a52a0c2?auto=format&fit=facearea&w=120&h=120&q=80"
-                    alt="Sugestão 3"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <div class="flex-1">
-                  <p class="font-semibold text-white">Pixel Beats</p>
-                  <p class="text-xs text-white/50">Beatmaker e VJ</p>
-                </div>
-                <button class="rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20">
-                  Seguir
-                </button>
-              </li>
-            </ul>
-          </section>
-
-          <section class="glass rounded-3xl p-6">
-            <header class="flex items-center justify-between">
-              <h2 class="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">
-                agenda ao vivo
-              </h2>
-              <button class="text-xs font-semibold text-brand-muted hover:text-white">
-                Ver agenda completa
-              </button>
-            </header>
-            <ul class="mt-4 space-y-3 text-sm text-white/70">
-              <li class="flex items-center justify-between rounded-2xl bg-white/5 p-3">
+            <ul class="mt-4 space-y-4 text-sm text-slate-600">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-brand"></span>
                 <div>
-                  <p class="text-white">Synthwave Nights</p>
-                  <p class="text-xs text-white/50">Hoje • 22h • Studio Orbit</p>
+                  <p class="font-semibold text-slate-800">Atualização de layout</p>
+                  <p class="text-xs text-slate-500">
+                    Nova navegação por abas disponível no app mobile. Explore hoje mesmo.
+                  </p>
                 </div>
-                <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-[10px] uppercase text-emerald-400">
-                  ao vivo
-                </span>
               </li>
-              <li class="flex items-center justify-between rounded-2xl bg-white/5 p-3">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
                 <div>
-                  <p class="text-white">NeoDocs Premiere</p>
-                  <p class="text-xs text-white/50">Amanhã • 20h • Canal Nivo</p>
+                  <p class="font-semibold text-slate-800">Clube de assinaturas</p>
+                  <p class="text-xs text-slate-500">
+                    Criadores podem lançar coleções exclusivas com recompensas mensais.
+                  </p>
                 </div>
-                <span class="rounded-full bg-brand-accent/20 px-3 py-1 text-[10px] uppercase text-brand-accent">
-                  estreia
-                </span>
               </li>
-              <li class="flex items-center justify-between rounded-2xl bg-white/5 p-3">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-rose-500"></span>
                 <div>
-                  <p class="text-white">Creators Summit</p>
-                  <p class="text-xs text-white/50">Domingo • 18h • Arena VR</p>
+                  <p class="font-semibold text-slate-800">Filtros inteligentes</p>
+                  <p class="text-xs text-slate-500">
+                    Ordene rapidamente o feed por lives, eventos ou reels em tempo real.
+                  </p>
                 </div>
-                <span class="rounded-full bg-brand/20 px-3 py-1 text-[10px] uppercase text-brand">
-                  vip
-                </span>
               </li>
             </ul>
           </section>
