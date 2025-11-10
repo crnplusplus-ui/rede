@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil | Conecta+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-gradient"></div>
+    <header class="navbar">
+      <div class="logo">Conecta+</div>
+      <div class="search">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="Pesquisar no Conecta+" />
+      </div>
+      <nav class="nav-actions">
+        <button class="nav-btn">Início</button>
+        <button class="nav-btn active">Perfil</button>
+        <button class="nav-btn">Mensagens</button>
+        <button class="nav-btn">Notificações</button>
+      </nav>
+      <div class="user-mini">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Perfil" />
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="profile-header card">
+        <div class="cover">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
+            alt="Paisagem"
+          />
+        </div>
+        <div class="profile-info">
+          <div class="avatar">
+            <img src="https://i.pravatar.cc/200?img=48" alt="Avatar" />
+          </div>
+          <div class="info">
+            <h1>Helena Martins</h1>
+            <p class="bio">
+              Criadora de conteúdo, apaixonada por storytelling digital e cultura pop.
+            </p>
+            <div class="tags">
+              <span>#criatividade</span>
+              <span>#vídeos</span>
+              <span>#tech</span>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="btn primary">Seguir</button>
+            <button class="btn ghost">Mensagem</button>
+            <button class="btn ghost">Mais</button>
+          </div>
+        </div>
+        <div class="stats">
+          <div>
+            <strong>128K</strong>
+            <span>Seguidores</span>
+          </div>
+          <div>
+            <strong>892</strong>
+            <span>Seguindo</span>
+          </div>
+          <div>
+            <strong>1.5K</strong>
+            <span>Postagens</span>
+          </div>
+          <div>
+            <strong>42</strong>
+            <span>Comunidades</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <aside class="sidebar card">
+          <h2>Destaques</h2>
+          <div class="highlight">
+            <div class="highlight-cover">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
+                alt="Evento ao vivo"
+              />
+            </div>
+            <div class="highlight-info">
+              <h3>Evento ao vivo</h3>
+              <p>Q&A sobre criação de conteúdo quarta-feira às 20h.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <div class="highlight-cover">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+                alt="Playlist de vídeos"
+              />
+            </div>
+            <div class="highlight-info">
+              <h3>Nova playlist</h3>
+              <p>15 vídeos sobre produção de vídeos curtos para redes.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <div class="highlight-cover">
+              <img
+                src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=80"
+                alt="Blog post"
+              />
+            </div>
+            <div class="highlight-info">
+              <h3>Blog post</h3>
+              <p>Como manter uma comunidade engajada em 2025.</p>
+            </div>
+          </div>
+
+          <h2 class="sidebar-title">Comunidades</h2>
+          <ul class="communities">
+            <li>
+              <span>🎬 Criadores BR</span>
+              <button class="chip">Participando</button>
+            </li>
+            <li>
+              <span>💡 Ideias Rápidas</span>
+              <button class="chip secondary">Ingressar</button>
+            </li>
+            <li>
+              <span>🎨 Studio 2D</span>
+              <button class="chip secondary">Ingressar</button>
+            </li>
+          </ul>
+        </aside>
+
+        <section class="feed">
+          <div class="composer card">
+            <div class="composer-top">
+              <img src="https://i.pravatar.cc/100?img=48" alt="Avatar" />
+              <input type="text" placeholder="Compartilhe algo com a comunidade..." />
+            </div>
+            <div class="composer-actions">
+              <button class="chip">🎥 Vídeo</button>
+              <button class="chip">🖼 Imagem</button>
+              <button class="chip">📌 Destaque</button>
+              <button class="btn primary">Publicar</button>
+            </div>
+          </div>
+
+          <article class="post card">
+            <header class="post-header">
+              <img src="https://i.pravatar.cc/100?img=16" alt="Avatar" />
+              <div>
+                <strong>Helena Martins</strong>
+                <span>há 2 horas · 🌎 Público</span>
+              </div>
+              <button class="icon-btn">⋯</button>
+            </header>
+            <p class="post-text">
+              Inaugurando a série “Bastidores do Storytelling”! No episódio de hoje falo
+              sobre roteiros curtos e como criar clímax em menos de 30 segundos.
+            </p>
+            <div class="post-media">
+              <img
+                src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1600&q=80"
+                alt="Estúdio criativo"
+              />
+            </div>
+            <footer class="post-footer">
+              <div class="reactions">
+                <span>👍 1.2K</span>
+                <span>💬 324</span>
+                <span>🔁 58</span>
+              </div>
+              <div class="post-actions">
+                <button class="chip">Curtir</button>
+                <button class="chip">Comentar</button>
+                <button class="chip">Compartilhar</button>
+              </div>
+            </footer>
+          </article>
+
+          <article class="post card">
+            <header class="post-header">
+              <img src="https://i.pravatar.cc/100?img=20" alt="Avatar" />
+              <div>
+                <strong>Helena Martins</strong>
+                <span>há 1 dia · 🔒 Amigos próximos</span>
+              </div>
+              <button class="icon-btn">⋯</button>
+            </header>
+            <p class="post-text">
+              Saiu o novo preset de cor que uso nos vídeos do canal! Disponível no
+              link fixado no perfil.
+            </p>
+            <div class="post-grid">
+              <img
+                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80"
+                alt="Mesa de edição"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80"
+                alt="Laptop com edição"
+              />
+            </div>
+            <footer class="post-footer">
+              <div class="reactions">
+                <span>👍 836</span>
+                <span>💬 112</span>
+                <span>📌 27</span>
+              </div>
+              <div class="post-actions">
+                <button class="chip">Curtir</button>
+                <button class="chip">Comentar</button>
+                <button class="chip">Compartilhar</button>
+              </div>
+            </footer>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
